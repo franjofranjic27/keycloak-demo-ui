@@ -1,35 +1,17 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import {KeycloakProfile} from "keycloak-js";
-import {KeycloakService} from "keycloak-angular";
 import {NgIf} from "@angular/common";
+import {ButtonModule} from "primeng/button";
+import {LayoutComponent} from "./layout/layout.component";
+import {LayoutModule} from "./layout/layout.module";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NgIf],
+  imports: [RouterOutlet, NgIf, ButtonModule, LayoutModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent implements OnInit {
-  public isLoggedIn = false;
-  public userProfile: KeycloakProfile | null = null;
+export class AppComponent {
 
-  constructor(private readonly keycloak: KeycloakService) {}
-
-  public async ngOnInit() {
-    this.isLoggedIn = await this.keycloak.isLoggedIn();
-
-    if (this.isLoggedIn) {
-      this.userProfile = await this.keycloak.loadUserProfile();
-    }
-  }
-
-  public login() {
-    this.keycloak.login();
-  }
-
-  public logout() {
-    this.keycloak.logout();
-  }
 }

@@ -1,0 +1,9 @@
+@import 'primeflex/primeflex.scss';
+
+:host {
+  display: grid;
+  height: 4rem;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--surface-a);
+}

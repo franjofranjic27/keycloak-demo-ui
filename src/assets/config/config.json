@@ -1,0 +1,30 @@
+{
+  "production": false,
+  "stage": "local",
+  "roles": {
+    "controlRoom": "A_30701_E_01_RCH-Mitarbeiter_ControlRoom",
+    "fachlicherSupervisor": "A_30701_E_01_RCH-Fachlicher_Supervisor",
+    "mitarbeiter": "A_30701_E_01_ALL-TransaktionsUeberwachung_Mitarbeiter_RCH_RB"
+  },
+  "airlockAuthConfig": {
+    "applicationName": "TRX Monitor (local)",
+    "authConfig": {
+      "issuer": "http://localhost:8180/auth/realms/trxmonrealm",
+      "clientId": "web-trxmon",
+      "showDebugInformation": true
+    },
+    "roles": [
+      "A_30701_E_01_RCH-Mitarbeiter_ControlRoom",
+      "A_30701_E_01_RCH-Fachlicher_Supervisor",
+      "A_30701_E_01_ALL-TransaktionsUeberwachung_Mitarbeiter_RCH_RB"
+    ],
+    "checkRolesEnabled": true,
+    "oAuthModuleConfig": {
+      "resourceServer": {
+        "sendAccessToken": true,
+        "allowedUrls": ["http://localhost:8080"]
+      }
+    }
+  },
+  "backendUrl": "http://localhost:8080"
+}

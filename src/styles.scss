@@ -1,1 +1,450 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'primeflex/primeflex.scss';
+@import "mixins";
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  overflow-x: hidden;
+  transition: background-color 200ms, color 200ms, border-color 200ms, box-shadow 200ms;
+}
+
+body {
+  background-color: var(--surface-b);
+  color: var(--text-color);
+  font-family: var(--font-family);
+
+  /* Application Variables */
+  &.LIGHT {
+    // LIGHT
+    --permanent: var(--bluegray-800);
+    --ad-hoc: var(--blue-700);
+    --upcoming: var(--yellow-700);
+    //
+    --gemeldet: var(--yellow-700);
+    --in-bearbeitung: var(--blue-700);
+    --in-bearbeitung-control-room: var(--blue-900);
+    --zur-kontrolle: var(--bluegray-800);
+    --abgeschlossen: #689f38;
+    --verworfen: #d32f2f;
+    //
+    --minor: #689f38;
+    --high: var(--orange-500);
+    --urgent: #d32f2f;
+    //
+    --new: var(--yellow-700);
+    --in-progress: var(--blue-700);
+    --in-progress-control-room: var(--blue-900);
+    --in-validation: var(--bluegray-800);
+    --completed: #689f38;
+    //
+    --freigegeben: #689f38;
+    --automatisch: var(--yellow-700);
+  }
+
+  &.BLUE {
+    // BLUE
+    --permanent: var(--bluegray-300);
+    --ad-hoc: var(--blue-300);
+    --upcoming: var(--yellow-300);
+    //
+    --gemeldet: var(--yellow-300);
+    --in-bearbeitung: var(--blue-300);
+    --in-bearbeitung-control-room: var(--blue-500);
+    --zur-kontrolle: var(--bluegray-300);
+    --abgeschlossen: #c5e1a5;
+    --verworfen: #f48fb1;
+    //
+    --minor: #c5e1a5;
+    --high: var(--orange-300);
+    --urgent: #f48fb1;
+    //
+    --new: var(--yellow-300);
+    --in-progress: var(--blue-300);
+    --in-progress-control-room: var(--blue-500);
+    --in-validation: var(--bluegray-300);
+    --completed: #c5e1a5;
+    //
+    --freigegeben: #c5e1a5;
+    --automatisch: var(--yellow-300);
+  }
+
+  &.DARK {
+    // DARK
+    --permanent: var(--bluegray-300);
+    --ad-hoc: var(--blue-300);
+    --upcoming: var(--yellow-300);
+    //
+    --gemeldet: var(--yellow-300);
+    --in-bearbeitung: var(--blue-300);
+    --in-bearbeitung-control-room: var(--blue-600);
+    --zur-kontrolle: var(--bluegray-300);
+    --abgeschlossen: #c5e1a5;
+    --verworfen: #f48fb1;
+    //
+    --minor: #c5e1a5;
+    --high: var(--orange-300);
+    --urgent: #f48fb1;
+    //
+    --new: var(--yellow-300);
+    --in-progress: var(--blue-300);
+    --in-progress-control-room: var(--blue-600);
+    --in-validation: var(--bluegray-300);
+    --completed: #c5e1a5;
+    //
+    --freigegeben: #c5e1a5;
+    --automatisch: var(--yellow-300);
+  }
+}
+
+/* Custom Classes START */
+
+.tag {
+  &.permanent {
+    .p-tag {
+      background-color: var(--permanent);
+    }
+  }
+
+  &.ad-hoc {
+    .p-tag {
+      background-color: var(--ad-hoc);
+    }
+  }
+
+  &.upcoming {
+    .p-tag {
+      background-color: var(--upcoming);
+    }
+  }
+
+  &.organisation {
+    .p-tag {
+      border: #424242 solid 1px;
+      background: #dee2e6;
+      color: #495055;
+    }
+  }
+
+  &.GEMELDET {
+    .p-tag {
+      background-color: var(--gemeldet);
+    }
+  }
+
+  &.IN_BEARBEITUNG {
+    .p-tag {
+      background-color: var(--in-bearbeitung);
+    }
+  }
+
+  &.IN_BEARBEITUNG_CONTROL_ROOM {
+    .p-tag {
+      background-color: var(--in-bearbeitung-control-room);
+    }
+  }
+
+  &.ZUR_KONTROLLE {
+    .p-tag {
+      background-color: var(--zur-kontrolle);
+    }
+  }
+
+  &.ABGESCHLOSSEN {
+    .p-tag {
+      background-color: var(--abgeschlossen);
+    }
+  }
+
+  &.VERWORFEN {
+    .p-tag {
+      background-color: var(--verworfen);
+    }
+  }
+
+  &.FREIGEGEBEN {
+    .p-tag {
+      background-color: var(--freigegeben);
+    }
+  }
+
+  &.AUTOMATISCH {
+    .p-tag {
+      background-color: var(--automatisch);
+    }
+  }
+
+  &.minor {
+    .p-tag {
+      background-color: var(--minor);
+    }
+  }
+
+  &.high {
+    .p-tag {
+      background-color: var(--high);
+    }
+  }
+
+  &.urgent {
+    .p-tag {
+      background-color: var(--urgent);
+    }
+  }
+
+  &.new {
+    .p-tag {
+      background-color: var(--new);
+    }
+  }
+
+  &.in_progress {
+    .p-tag {
+      background-color: var(--in-progress);
+    }
+  }
+
+  &.in_progress_control_room {
+    .p-tag {
+      background-color: var(--in-progress-control-room);
+    }
+  }
+
+  &.in_validation {
+    .p-tag {
+      background-color: var(--in-validation);
+    }
+  }
+
+  &.completed {
+    .p-tag {
+      background-color: var(--completed);
+    }
+  }
+}
+
+.icon-combination {
+  display: flex;
+  align-items: center;
+
+  :nth-child(1) {
+    font-size: 1.3rem;
+  }
+
+  :nth-child(2) {
+    margin-left: 4px;
+    font-size: 0.8rem;
+  }
+}
+
+.selectable-card {
+  border: solid transparent 0.2rem;
+  cursor: pointer;
+  transition: border 100ms ease-in-out !important;
+
+  &:hover {
+    border: solid var(--text-color) 0.2rem;
+    transition: border 100ms ease-in-out !important;
+  }
+
+  &.active {
+    border: solid var(--text-color) 0.2rem;
+    transition: border 100ms ease-in-out !important;
+  }
+
+  &:active {
+    border: solid var(--text-color) 0.2rem;
+    transition: border 100ms ease-in-out !important;
+  }
+}
+
+.p-dropdown {
+  width: 100% !important;
+}
+
+.tag-dropdown {
+  .p-dropdown {
+    .p-inputtext {
+      padding: 6px 0.5rem;
+    }
+
+    .p-tag {
+      padding: 3px 0.4rem;
+    }
+  }
+}
+
+/* Custom Classes END */
+
+/* PrimeNG Overwrites START */
+
+app-side-navigation {
+  .p-panelmenu {
+    .p-menuitem-icon {
+      width: 1.3rem !important;
+    }
+
+    .p-menuitem-link-active {
+      .p-menuitem-text,
+      .p-menuitem-icon {
+        color: var(--primary-color) !important;
+      }
+    }
+
+    .p-menuitem-link {
+      transition: background-color 100ms ease-in-out !important;
+
+      &:hover {
+        transition: background-color 100ms ease-in-out !important;
+      }
+    }
+  }
+}
+
+app-restricted-list-item {
+  .empty-valoren {
+    .p-chip {
+      border: var(--text-color) 1px solid;
+      background: transparent;
+      color: var(--text-color);
+    }
+  }
+}
+
+app-watch-list-item-detail {
+  .empty-betroffene {
+    .p-chip {
+      border: var(--text-color) 1px solid;
+      background: transparent;
+      color: var(--text-color);
+    }
+  }
+}
+
+app-case-detail {
+  .tabview-custom {
+    overflow: hidden;
+    height: 100%;
+
+    .p-tabview {
+      display: grid;
+      height: 100%;
+      grid-template-rows: auto 1fr;
+
+      .p-tabview-panels {
+        overflow: auto;
+        height: 100%;
+
+        @include custom-scrollbar;
+      }
+    }
+  }
+}
+
+// Accordion Header
+.p-accordion .p-accordion-header .p-accordion-header-link,
+.p-accordion .p-accordion-header:not(.p-disabled).p-highlight .p-accordion-header-link,
+.p-accordion .p-accordion-header:not(.p-highlight):not(.p-disabled):hover .p-accordion-header-link,
+.p-accordion .p-accordion-header:not(.p-disabled).p-highlight:hover .p-accordion-header-link {
+  background: var(--surface-e);
+
+  .p-accordion .p-accordion-content {
+    padding: 1rem;
+  }
+
+  .p-tabview .p-tabview-nav {
+    background: var(--surface-e);
+  }
+
+  .tabview-custom {
+    .p-tabview-panels {
+      padding: 1rem 0 0 0;
+    }
+  }
+}
+
+.ql-editor {
+  @include custom-scrollbar;
+}
+
+.p-checkbox {
+  position: relative; // fix primeng bug (because child element has position absolute)
+}
+
+.p-tabmenuitem {
+  margin-top: 2px;
+}
+
+.p-tabview .p-tabview-nav li {
+  margin-top: 2px;
+}
+
+.p-overlaypanel {
+  box-shadow: 0 6px 11px -7px rgba(0, 0, 0, 0.2), 0 14px 28px 3px rgba(0, 0, 0, 0.14), 0 9px 30px 8px rgba(0, 0, 0, 0.12);
+}
+
+.p-datatable-scrollable-body {
+  padding-right: 5px;
+
+  @include custom-scrollbar;
+}
+
+.p-panelmenu .p-panelmenu-header > a,
+.p-panelmenu .p-panelmenu-content {
+  border: none;
+}
+
+.p-panelmenu .p-panelmenu-header > a,
+.p-panelmenu .p-panelmenu-header.p-highlight > a {
+  background: var(--surface-e);
+}
+
+.p-panelmenu .p-panelmenu-panel:first-child .p-panelmenu-header > a {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+app-generate-alert {
+  .custom-spinner .p-progress-spinner-circle {
+    animation: custom-progress-spinner-color 6s ease-in-out infinite;
+  }
+
+  @keyframes custom-progress-spinner-color {
+    100%,
+    0% {
+      stroke: #f00;
+    }
+
+    40% {
+      stroke: #fff;
+    }
+
+    66% {
+      stroke: #f00;
+    }
+
+    80%,
+    90% {
+      stroke: #fff;
+    }
+  }
+}
+
+app-mitteilung-new,
+app-vertraulichkeitsbereich-history {
+  .p-editor-container {
+    display: grid;
+    height: 100%;
+    grid-template-rows: auto 1fr;
+  }
+}
+
+.p-tooltip {
+  max-width: none !important;
+}
+
+.p-toast {
+  z-index: 9999 !important; // #808281 - On Case update Toast is behind Header
+}
+
+/* PrimeNG Overwrites END */

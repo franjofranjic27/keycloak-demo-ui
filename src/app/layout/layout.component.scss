@@ -1,0 +1,71 @@
+@import "variables";
+
+:host {
+  .layout-container {
+    display: grid;
+    min-height: 100%;
+    grid-auto-flow: column;
+    grid-template-areas:
+      'header header header'
+      'side-navigation content sidebar';
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: auto 1fr;
+
+    app-header {
+      grid-area: header;
+    }
+
+    app-side-navigation {
+      grid-area: side-navigation;
+    }
+
+    .content-wrapper {
+      display: grid;
+      grid-area: content;
+      grid-template-rows: 1fr auto;
+      transition: margin 0.3s;
+
+      .content {
+        width: 100%;
+        max-width: 90rem;
+        justify-self: center;
+      }
+
+      .content-full {
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+
+    .overlay {
+      z-index: 900;
+      background-color: rgba(0, 0, 0, 0.4);
+      grid-area: content;
+      transition: background-color 0.3s;
+
+      @media (min-width: $side-breakpoint) {
+        display: none;
+      }
+    }
+
+    app-sidebar {
+      grid-area: sidebar;
+    }
+
+    &.window-height-layout {
+      height: 100%;
+
+      .content-wrapper {
+        overflow: hidden;
+
+        .content {
+          overflow: hidden;
+        }
+
+        .content-full {
+          overflow: hidden;
+        }
+      }
+    }
+  }
+}
