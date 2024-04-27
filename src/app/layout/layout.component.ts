@@ -72,7 +72,6 @@ export class LayoutComponent implements OnInit {
 
     if (this.isLoggedIn) {
       this.userProfile = await this.keycloak.loadUserProfile();
-      console.log(this.userProfile);
     }
   }
 

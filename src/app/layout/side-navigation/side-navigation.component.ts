@@ -10,8 +10,7 @@ import {LanguageState, LanguageType} from "../../core/state/language/language.re
 import {TranslateModule, TranslateService} from "@ngx-translate/core";
 import {LanguageService} from "../../core/state/language/language.service";
 import {select, Store} from "@ngrx/store";
-import {selectLanguage, updateLanguage} from "../../core/state/language/language.actions";
-import {AppIcons} from "../../shared/app-icons";
+import {selectLanguage} from "../../core/state/language/language.actions";
 import {ThemeService} from "../../core/state/theme/theme.service";
 
 @Component({
@@ -26,7 +25,6 @@ import {ThemeService} from "../../core/state/theme/theme.service";
   ],
   providers: [
     LanguageService,
-    // ConfigurationService
   ],
   templateUrl: './side-navigation.component.html',
   styleUrl: './side-navigation.component.scss'
@@ -42,18 +40,15 @@ export class SideNavigationComponent implements OnInit {
 
   theme$!: Observable<ThemeType>;
   private readonly THEMES = [
-    {label: 'theme.light', value: ThemeType.LIGHT, icon: AppIcons.LIGHT},
-    {label: 'theme.blue', value: ThemeType.BLUE, icon: AppIcons.BLUE},
-    {label: 'theme.dark', value: ThemeType.DARK, icon: AppIcons.DARK}
+    {label: 'theme.light', value: ThemeType.LIGHT},
+    {label: 'theme.blue', value: ThemeType.BLUE},
+    {label: 'theme.dark', value: ThemeType.DARK}
   ];
   language$!: Observable<LanguageType>;
   menuItems$!: Observable<MenuItem[]>;
   languages$!: Observable<{ [key: string]: string }[]>;
   themes$!: Observable<{ [key: string]: string }[]>;
-  private routerUrl$!: Observable<string>;
-  // version = versions.versionLong;
-  // versionDate = versions.versionDate;
-  //
+
   private readonly LANGUAGES = [
     {label: 'language.de', value: LanguageType.de},
     {label: 'language.fr', value: LanguageType.fr},
@@ -64,7 +59,6 @@ export class SideNavigationComponent implements OnInit {
     private themeService: ThemeService,
     private translateService: TranslateService,
     private languageService: LanguageService,
-    // private routerQuery: RouterQuery,
     // private roleVerifierService: RoleVerifierService
     private languageStore: Store<LanguageState>,
     private themeStore: Store<ThemeState>
@@ -73,9 +67,6 @@ export class SideNavigationComponent implements OnInit {
   ngOnInit(): void {
     this.theme$ = this.themeStore.select('theme');
     this.language$ = this.languageStore.select('language');
-    this.theme$.subscribe(console.log);
-    this.language$.subscribe(console.log);
-    // this.initRouterUrl();
     this.initMenuItems();
     this.initLanguages();
     this.initThemes();
@@ -133,8 +124,4 @@ export class SideNavigationComponent implements OnInit {
       })
     );
   }
-
-  // private initRouterUrl(): void {
-  //   this.routerUrl$ = this.routerQuery.select().pipe(map(routerState => routerState.state?.url || ''));
-  // }
 }
