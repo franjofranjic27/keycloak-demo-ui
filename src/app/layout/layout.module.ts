@@ -6,7 +6,6 @@ import { SideNavigationComponent } from './side-navigation/side-navigation.compo
 import { FooterComponent } from './footer/footer.component';
 import { ScrollTopModule } from 'primeng/scrolltop';
 import { ToastModule } from 'primeng/toast';
-// import { SharedModule } from '@shared/shared.module';
 import { MenuModule } from 'primeng/menu';
 import { DropdownModule } from 'primeng/dropdown';
 import { BadgeModule } from 'primeng/badge';
@@ -15,14 +14,12 @@ import { TooltipModule } from 'primeng/tooltip';
 import { PortalModule } from '@angular/cdk/portal';
 import { PanelMenuModule } from 'primeng/panelmenu';
 import {SidebarComponent} from "./sidebar/sidebar.component";
-import {StoreModule} from "@ngrx/store";
 
 @NgModule({
   declarations: [
     LayoutComponent
   ],
   imports: [
-    // StoreModule,
     ScrollTopModule,
     NgIf,
     HeaderComponent,
@@ -35,7 +32,6 @@ import {StoreModule} from "@ngrx/store";
     CommonModule,
     ScrollTopModule,
     ToastModule,
-    // SharedModule,
     MenuModule,
     DropdownModule,
     BadgeModule,

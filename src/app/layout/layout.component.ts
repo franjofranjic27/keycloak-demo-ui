@@ -13,7 +13,7 @@ import {ScrollTopModule} from "primeng/scrolltop";
 import {ToastModule} from "primeng/toast";
 import {ConfirmDialogModule} from "primeng/confirmdialog";
 import {SidebarService} from "./sidebar/sidebar.service";
-import {ConfigurationService} from "../config/configuration.service";
+// import {ConfigurationService} from "../config/configuration.service";
 import {SidebarComponent} from "./sidebar/sidebar.component";
 import {select, Store} from "@ngrx/store";
 import {LayoutOptionState} from "../core/state/layout-option/layout-option.reducer";
@@ -24,8 +24,8 @@ import {LayoutOptionState} from "../core/state/layout-option/layout-option.reduc
   styleUrl: './layout.component.scss',
   animations: [
     trigger('navigationCollapse', [
-      state('true', style({overflow: 'hidden', 'margin-left': '-16rem'})),
-      state('false', style({overflow: '*', 'margin-left': '0'})),
+      state('true', style({'overflow': 'hidden', 'margin-left': '-16rem'})),
+      state('false', style({'overflow': '*', 'margin-left': '0'})),
       transition('false => true', animate('200ms ease-in')),
       transition('true => false', animate('250ms ease-out')),
     ]),

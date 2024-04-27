@@ -1,0 +1,78 @@
+{
+	"actions": {
+		"delete": "Löschen",
+		"filter": "Filtern",
+		"newEntry": "Neuer Eintrag",
+		"unsavedAccept": "Änderungen verwerfen",
+		"unsavedHeader": "Ungespeicherte Änderungen",
+		"unsavedMessage": "Es gibt ungespeicherte Änderungen. Wollen Sie wirklich schliessen und Änderungen verwerfen?",
+		"unsavedReject": "Abbrechen"
+	},
+	"error": {
+		"403": "Opps...Entschuldigung, wir können Sie nicht erkennen.",
+		"404": "Opps... Das Licht ist an, aber wir können ihre gesuchte Webseite nicht finden.",
+		"500": "Entschuldigung, es ist nicht ihr Fehler. Wir haben etwas kaputt gemacht.",
+		"casemanger": {
+			"four_eyes_required": "Vier Augenprinzip wurde verletzt!",
+			"not_found": "Case wurde nicht gefunden"
+		},
+		"emittentenabgleich": {
+			"abgleich_text_required": "Ein Abgleich Text ist zwingend",
+			"id_required": "ID konnte nicht zugeordnet werden.",
+			"not_found": "Valor nicht gefunden",
+			"status_required": "Status zwingend",
+			"typ_required": "Abgleich-Typ konnte nicht gefunden werden.",
+			"valor_duplicated": "Valor bereits als Emittentenabgleich vorhanden",
+			"valor_required": "Kein zugeordneter Valor gefunden"
+		},
+		"error": "Fehler",
+		"error_400_description": "Ungültige Anfrage",
+		"error_403_description": "Ungültige Berechtigung",
+		"error_404_description": "Element nicht gefunden",
+		"error_405_description": "Methode ist nicht erlaubt",
+		"error_500_description": "Interner Server Fehler",
+		"error_503_description": "Service nicht verfügbar",
+		"report": {
+			"time_from_to_required": "Das Von und Bis Datum ist zwingend"
+		},
+		"service_not_responding": "Der Service steht zur Zeit nicht zur Verfügung",
+		"statemachine": {
+			"transition": {
+				"not_allowed": "Transition nicht erlaubt",
+				"not_found": "Transition wurde nicht gefunden"
+			}
+		},
+		"timeout": "Die Anfrage dauerte zulange",
+		"valoren": {
+			"not_found": "Der Valoren Service lieferte keinen gültigen Valor zurück."
+		},
+		"vertraulichkeitsbereich": {
+			"inaktive_verantwortliche_person": "Verantwortliche Person ist inaktiv"
+		}
+	},
+	"features": {},
+	"language": {
+		"de": "Deutsch",
+		"fr": "Französisch",
+		"it": "Italienisch"
+	},
+	"layout": {
+		"header": {
+			"url": "https://rai-web.service.raiffeisen.ch/content/raiweb/rch/de/dienste/informatik/applikationen/auftrags-und-informationssysteme-marktbearbeitung/mitarbeitergeschaeftsueberwachung-rch-rb-trxmon.html"
+		}
+	},
+	"menu": {
+		"actionBoard": "Home"
+	},
+	"shared": {},
+	"sidebar": {
+		"close": "Sidebar schliessen",
+		"open": "Sidebar öffnen"
+	},
+	"theme": {
+		"blue": "Blue",
+		"dark": "Dark",
+		"light": "Light"
+	},
+	"title": "APP Example"
+}

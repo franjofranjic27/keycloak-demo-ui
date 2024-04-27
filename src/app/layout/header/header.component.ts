@@ -2,7 +2,6 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {MenuItem} from "primeng/api";
 import {MenubarModule} from "primeng/menubar";
 import {map, Observable, Subject} from "rxjs";
-import {ConfigurationService} from "../../config/configuration.service";
 import {ButtonModule} from "primeng/button";
 
 @Component({

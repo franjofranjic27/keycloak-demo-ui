@@ -1,6 +1,4 @@
 <div [class.window-height-layout]="isWindowHeightLayout$ | async" class="layout-container">
-<div class="layout-container">
-
   <app-header class="header-summary shadow-4 pr-4" (toggleSideNavigation)="toggleSideNavigation()"></app-header>
   <app-side-navigation [@navigationCollapse]="isNavigationCollapsed" class="shadow-4"></app-side-navigation>
 
@@ -15,12 +13,12 @@
 
   <app-sidebar [@sidebarOpen]="isSidebarOpen$ | async" class="shadow-4"></app-sidebar>
 </div>
-<!--<p-scrollTop></p-scrollTop>-->
-<!--<p-toast [baseZIndex]="99999"></p-toast>-->
-<!--<p-confirmDialog header="Confirmation"-->
-<!--                 icon="fas fa-exclamation-triangle"-->
-<!--                 rejectButtonStyleClass="button-outlined"-->
-<!--                 acceptIcon=""-->
-<!--                 rejectIcon=""-->
-<!--                 [style]="{'min-width': '400px'}">-->
-<!--</p-confirmDialog>-->
+<p-scrollTop></p-scrollTop>
+<p-toast [baseZIndex]="99999"></p-toast>
+<p-confirmDialog header="Confirmation"
+                 icon="fas fa-exclamation-triangle"
+                 rejectButtonStyleClass="button-outlined"
+                 acceptIcon=""
+                 rejectIcon=""
+                 [style]="{'min-width': '400px'}">
+</p-confirmDialog>

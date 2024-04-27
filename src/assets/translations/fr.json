@@ -1,0 +1,79 @@
+{
+	"actions": {
+		"delete": "Supprimer",
+		"filter": "Filtrer",
+		"newEntry": "Nouvelle saisie",
+		"unsavedAccept": "Rejeter les modifications",
+		"unsavedHeader": "Modifications non enregistrées",
+		"unsavedMessage": "Il y a des modifications non enregistrées. Voulez-vous vraiment fermer et rejeter les modifications ?",
+		"unsavedReject": "Suspendre"
+	},
+	"error": {
+		"403": "Opps... Désolé, nous ne pouvons pas vous identifier.",
+		"404": "Opps ... la lumière est allumée, mais nous ne pouvons pas trouver la page web que vous recherchez.",
+		"500": "Désolé, ce n'est pas de votre faute. Nous avons cassé quelque chose.",
+		"casemanger": {
+			"four_eyes_required": "Le principe des quatre yeux a été violé!",
+			"not_found": "Cas non trouvé"
+		},
+		"emittentenabgleich": {
+			"abgleich_text_required": "Un texte correspondant est obligatoire",
+			"id_required": "L'ID n'a pas pu être attribué.",
+			"not_found": "Valeur introuvable",
+			"status_required": "Statut obligatoire",
+			"typ_required": "Impossible de trouver le type correspondant.",
+			"valor_duplicated": "Valor déjà disponible comme comparaison d'émetteurs",
+			"valor_required": "Aucun titre attribué n'a été trouvé"
+		},
+		"error": "Erreur",
+		"error_400_description": "Requête invalide",
+		"error_403_description": "Autorisation invalide",
+		"error_404_description": "Élément introuvable",
+		"error_405_description": "La méthode n'est pas autorisée",
+		"error_500_description": "Erreur de serveur interne",
+		"error_503_description": "Service indisponible",
+		"report": {
+			"time_from_to_required": "La date de début et de fin est obligatoire"
+		},
+		"service_not_responding": "Le service n'est pas disponible pour le moment",
+		"statemachine": {
+			"transition": {
+				"not_allowed": "Transition non autorisée",
+				"not_found": "Transition non trouvée"
+			}
+		},
+		"timeout": "La demande a pris trop de temps",
+		"valoren": {
+			"not_found": "Le service des titres n'a pas retourné de titre valide."
+		},
+		"vertraulichkeitsbereich": {
+			"inaktive_verantwortliche_person": "La personne responsable est inactive"
+		}
+	},
+	"features": {},
+	"language": {
+		"de": "Allemand",
+		"fr": "Français",
+		"it": "Italien"
+	},
+	"layout": {
+		"header": {
+			"url": "https://rai-web.service.raiffeisen.ch/rch/fr/services/informatique/applications/systeme_de_traitementdesordresprospectiondumarchesystemesdinform/surveillance-operations-collaboratrices-collaborateurs-rch-br-trxmon.html"
+		}
+	},
+	"menu": {
+		"actionBoard": "FR: Home"
+	},
+	"shared": {
+	},
+	"sidebar": {
+		"close": "Fermer la barre latérale",
+		"open": "Ouvrir la barre latérale"
+	},
+	"theme": {
+		"blue": "Blue",
+		"dark": "Dark",
+		"light": "Light"
+	},
+	"title": "TRX MON"
+}

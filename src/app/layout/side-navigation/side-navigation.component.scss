@@ -1,0 +1,30 @@
+@import "../variables";
+@import "../../../mixins";
+
+:host {
+  position: sticky;
+  top: $header-height;
+  display: grid;
+  width: $side-navigation-width;
+  height: calc(100vh - #{$header-height});
+  padding: 1rem;
+  background-color: var(--surface-a);
+  grid-area: side-navigation;
+  grid-auto-flow: row;
+  grid-row-gap: 1rem;
+  grid-template-rows: 1fr min-content min-content min-content;
+
+  .menu {
+    padding-top: 0.5rem;
+    overflow-y: auto;
+
+    @include custom-scrollbar;
+  }
+
+  @media (max-width: $side-breakpoint) {
+    position: fixed;
+    z-index: $side-navigation-z-index;
+    top: $header-height;
+    left: 0;
+  }
+}

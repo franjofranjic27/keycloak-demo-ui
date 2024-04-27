@@ -9,3 +9,4 @@ export const setIsFullWidthLayout = createAction(
   '[Layout Option] Set Is Full Width Layout',
   props<{ isFullWidthLayout: boolean }>()
 );
+

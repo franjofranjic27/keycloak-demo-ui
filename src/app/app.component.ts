@@ -2,8 +2,8 @@ import {Component} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import {NgIf} from "@angular/common";
 import {ButtonModule} from "primeng/button";
-import {LayoutComponent} from "./layout/layout.component";
 import {LayoutModule} from "./layout/layout.module";
+import {BrowserAnimationsModule, NoopAnimationsModule} from "@angular/platform-browser/animations";
 
 @Component({
   selector: 'app-root',

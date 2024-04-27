@@ -1,27 +1,26 @@
-<!--<div *ngIf="menuItems$ | async as menuItems" class="menu">-->
-<!--  <p-panelMenu [model]="menuItems" styleClass="menu"></p-panelMenu>-->
-<!--</div>-->
-<!--<ng-container *ngIf="languages$ | async as languages">-->
-<!--  <p-dropdown (onChange)="setLanguage($event)"-->
-<!--              [ngModel]="language$ | async"-->
-<!--              [options]="languages"-->
-<!--              dropdownIcon="fas fa-chevron-down"-->
-<!--              appendTo="body"></p-dropdown>-->
-<!--</ng-container>-->
-<!--<ng-container *ngIf="themes$ | async as themes">-->
-<!--  <p-dropdown (onChange)="setTheme($event)"-->
-<!--              [ngModel]="theme$ | async"-->
-<!--              [options]="themes"-->
-<!--              dropdownIcon="fas fa-chevron-down"-->
-<!--              appendTo="body">-->
-<!--    <ng-template let-selectedItem pTemplate="selectedItem">-->
-<!--      <div class="ml-2"><i [class]="selectedItem.icon" class="mr-3"></i>{{selectedItem.label}}</div>-->
-<!--    </ng-template>-->
-<!--    <ng-template let-item pTemplate="item">-->
-<!--      <div><i [class]="item.icon" class="mr-3"></i>{{item.label}}</div>-->
-<!--    </ng-template>-->
-<!--  </p-dropdown>-->
-<!--</ng-container>-->
-<!--<div class="text-center text-light">-->
+<div *ngIf="menuItems$ | async as menuItems" class="menu">
+  <p-panelMenu [model]="menuItems" styleClass="menu"></p-panelMenu>
+</div>
+<ng-container *ngIf="languages$ | async as languages">
+  <p-dropdown (onChange)="setLanguage($event)"
+              [ngModel]="language$ | async"
+              [options]="languages"
+              dropdownIcon="fas fa-chevron-down"
+              appendTo="body"></p-dropdown>
+</ng-container>
+<ng-container *ngIf="themes$ | async as themes">
+  <p-dropdown (onChange)="setTheme($event)"
+              [ngModel]="theme$ | async"
+              [options]="themes"
+              appendTo="body">
+    <ng-template let-selectedItem pTemplate="selectedItem">
+      <div class="ml-2"><i [class]="selectedItem.icon" class="mr-3"></i>{{selectedItem.label}}</div>
+    </ng-template>
+    <ng-template let-item pTemplate="item">
+      <div><i [class]="item.icon" class="mr-3"></i>{{item.label}}</div>
+    </ng-template>
+  </p-dropdown>
+</ng-container>
+<div class="text-center text-light">
 <!--  <span [pTooltip]="(versionDate | date: 'medium') || ''">version: {{version}}</span>-->
-<!--</div>-->
+</div>

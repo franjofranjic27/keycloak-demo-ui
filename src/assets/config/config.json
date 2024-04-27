@@ -7,9 +7,9 @@
     "mitarbeiter": "A_30701_E_01_ALL-TransaktionsUeberwachung_Mitarbeiter_RCH_RB"
   },
   "airlockAuthConfig": {
-    "applicationName": "TRX Monitor (local)",
+    "applicationName": "Example App (local)",
     "authConfig": {
-      "issuer": "http://localhost:8180/auth/realms/trxmonrealm",
+      "issuer": "http://localhost:8180/auth/realms/example",
       "clientId": "web-trxmon",
       "showDebugInformation": true
     },

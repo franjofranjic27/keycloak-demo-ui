@@ -1,0 +1,79 @@
+{
+	"actions": {
+		"delete": "Cancellare",
+		"filter": "Filtrare",
+		"newEntry": "Nuova voce",
+		"unsavedAccept": "Annullare le modifiche",
+		"unsavedHeader": "Modifiche non salvate",
+		"unsavedMessage": "Sono presenti modifiche non salvate. Vuole davvero chiudere e annullare le modifiche?",
+		"unsavedReject": "Interrompere"
+	},
+	"error": {
+		"403": "Opps... Siamo spiacenti, non possiamo riconoscerla.",
+		"404": "Opps... la luce è accesa, ma non riusciamo a trovare la pagina web da lei cercata.",
+		"500": "Mi dispiace, non è un suo errore. Abbiamo rotto qualcosa.",
+		"casemanger": {
+			"four_eyes_required": "Il principio dei quattro occhi è stato violato!",
+			"not_found": "Il caso non è stato trovato"
+		},
+		"emittentenabgleich": {
+			"abgleich_text_required": "Un testo corrispondente è obbligatorio",
+			"id_required": "Impossibile assegnare l'ID.",
+			"not_found": "Valore non trovato",
+			"status_required": "stato obbligatorio",
+			"typ_required": "Impossibile trovare il tipo corrispondente.",
+			"valor_duplicated": "Valore già disponibile come confronto emittenti",
+			"valor_required": "Nessun titolo assegnato trovato"
+		},
+		"error": "Errore",
+		"error_400_description": "Richiesta non valida",
+		"error_403_description": "Autorizzazione non valida",
+		"error_404_description": "Elemento non trovato",
+		"error_405_description": "Il metodo non è consentito",
+		"error_500_description": "Errore interno del server",
+		"error_503_description": "Servizio non disponibile",
+		"report": {
+			"time_from_to_required": "La data da e fino è obbligatoria"
+		},
+		"service_not_responding": "Il servizio non è attualmente disponibile",
+		"statemachine": {
+			"transition": {
+				"not_allowed": "Transizione non consentita",
+				"not_found": "Transizione non trovata"
+			}
+		},
+		"timeout": "La richiesta ha richiesto troppo tempo",
+		"valoren": {
+			"not_found": "Il servizio titoli non ha restituito un titolo valido."
+		},
+		"vertraulichkeitsbereich": {
+			"inaktive_verantwortliche_person": "La persona responsabile è inattiva"
+		}
+	},
+	"features": {},
+	"language": {
+		"de": "Tedesco",
+		"fr": "Francese",
+		"it": "Italiano"
+	},
+	"layout": {
+		"header": {
+			"url": "https://rai-web.service.raiffeisen.ch/rch/it/servizi/informatica/applicazioni/sistema_degli_ordinitrattamentodelmercatosistemidinformazione/monitoraggio-delle-operazioni-dei-collaboratori-rch-br-trxmon.html"
+		}
+	},
+	"menu": {
+		"actionBoard": "IT: Home"
+	},
+	"shared": {
+	},
+	"sidebar": {
+		"close": "Chiudere barra laterale",
+		"open": "Aprire barra laterale"
+	},
+	"theme": {
+		"blue": "Blue",
+		"dark": "Dark",
+		"light": "Light"
+	},
+	"title": "TRX MON"
+}

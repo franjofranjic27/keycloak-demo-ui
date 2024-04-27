@@ -1,21 +1,4 @@
-<p-button (click)="onToggleSideNavigation()"
-        class="side-navigation-toggle p-button-text p-button-secondary"
-        label=" ">
-  <i class="fas fa-bars"></i>
-</p-button>
-<div class="title-wrapper">
-  <span routerLink="/" class="rch-logo"><img src="assets/RCH_Logo.png" alt="RCH_Logo"></span>
-  <h1 routerLink="/">TRX M</h1>
-  <span routerLink="/" class="trx-logo p-mt-1">
-
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32.025" height="32.025" viewBox="0 0 750 750">
-  <image y="1" width="750" height="749" xlink:href="data:img/png;base64,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"/>
-</svg>
-
-  </span>
-  <h1 routerLink="/">N {{environment}}</h1>
-</div>
-<div class="space-navigation"></div>
+<p-button icon="pi pi-bars" [rounded]="true" [text]="true"  (click)="onToggleSideNavigation()"></p-button>
 <!--<div *ngIf="userProfile$ | async as userProfile" class="profile-info">-->
 <!--  <trxmon-avatar [userProfile]="userProfile"></trxmon-avatar>-->
 <!--  <span class="p-ml-2 profile-info-name">-->
